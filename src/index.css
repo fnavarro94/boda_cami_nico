@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* Smooth scrolling for anchor links */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Antiga Regular (placed in /public/fonts) */
+@font-face {
+  font-family: "Antiga";
+  src: url("/fonts/Antiga-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Wix Madefor Display Regular (placed in /public/fonts) */
+@font-face {
+  font-family: "Wix Madefor Display";
+  src: url("/fonts/WixMadeforDisplay-Regular.woff2") format("woff2"),
+       url("/fonts/WixMadeforDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global CSS variables for custom fonts */
+:root {
+  --font-antiga: "Antiga", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-wix: "Wix Madefor Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  font-family: var(--font-wix);
+  text-transform: uppercase;
+}
+
+/* Utility classes */
+.font-antiga {
+  font-family: var(--font-antiga);
+  text-transform: none;
+}
+
+.font-wix {
+  font-family: var(--font-wix);
+}
